@@ -6,7 +6,7 @@ def jugar():
     marcador = Scoreboard()
 
     while True:
-        usuario = imput ("Elije piedra, papel o tijeras (o SALIR para terminar el juego): ").lower()
+        usuario = input ("Elije piedra, papel o tijeras (o SALIR para terminar el juego): ").lower()
         if usuario == "SALIR":
             print ("\nJuego Terminado")
             marcador.mostrar()
