@@ -7,16 +7,16 @@ def jugar():
 
     while True:
         usuario = input ("Elije piedra, papel o tijeras (o SALIR para terminar el juego): ").lower()
-        if usuario == "SALIR":
+        if usuario == "salir":
             print ("\nJuego Terminado")
             marcador.mostrar()
             break
-        if usuario not in ["piedra, papel o tijeras"]:
+        if usuario not in ["piedra", "papel", "tijeras"]:
             print ("Entrada invalida. Intenta de nuevo. ")
             continue
         computadora = jugada_computadora()
-        print ("Tu elegiste: {usuario}")
-        print ("La computadora eligió: {computadora}")
+        print (f"Tu elegiste: {usuario}")
+        print (f"La computadora eligió: {computadora}")
 
         resultado = determinar_ganador(usuario, computadora)
 
@@ -29,5 +29,5 @@ def jugar():
 
         marcador.actualizar(resultado)
         marcador.mostrar()
-    if __name__ == "__main__":
+if __name__ == "__main__":
         jugar()
